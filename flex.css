@@ -8,20 +8,22 @@ div {
 section {
     border: 2px dashed red;
     display: flex;
-    margin: 10px;
-    height: 100%;
-    width: 100%;
+    flex-wrap: nowrap;
     justify-content: space-between; 
     align-items: flex-start;
-
+    margin: 10px;
+    /* When setting height to the parent flex-container IOT manipulate items do NOT set to a percentage but give a height in pixels lest you must give the children a height which will allow the height of the entire items' container to stretch to meet the rule  */
+    height: 60px;
+    width: 90%;
+    background: silver;
 }
 p {
-    height: 60px;
+    /* do NOT give these items a height greater than or equal to the parent lest their content area stretch to fill the parent container and you wont see the innerHTML align properly */
     margin: 0;
     background: chartreuse;
   
 }
-p:nth-child(3) {
-    align-self: center;
+p:last-child {
+    align-self: flex-end;
     background: blueviolet;
 }
