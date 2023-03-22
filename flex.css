@@ -5,11 +5,23 @@ div {
     display: flex;
     flex-direction: column;
 }
-.text {
+section {
     border: 2px dashed red;
     display: flex;
+    margin: 10px;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between; 
+    align-items: flex-start;
+
+}
+p {
+    height: 60px;
     margin: 0;
-    padding: 0;
-    justify-content: space-between;
-    align-items: flex-end;
+    background: chartreuse;
+  
+}
+p:nth-child(3) {
+    align-self: center;
+    background: blueviolet;
 }
