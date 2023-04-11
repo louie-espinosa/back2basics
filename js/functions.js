@@ -90,4 +90,8 @@ alert("Again we thank you for visiting us today, here is the expected tip amount
  * > applyDiscount(originalPrice, discountPercent) // 80
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
- * */
+ **/
+function applyDiscount (a, b) {
+    return a - (a * b) 
+}
+console.log(applyDiscount(100, .3));
