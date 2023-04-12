@@ -21,38 +21,56 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-function analyzeColor(color) { 
-    if (color === "red") {
-        console.log("To show the world the blood we shed!")
-    } else if (color === "gold") {
-        console.log("To show the world that we are bold!")
-    } else if (color === "blue") {
-        console.log("To show the world that we are true")
-    } else {
-        console.log("I dont know anything about " + color);
-    }
+// function analyzeColor(color) { 
+//     if (color === "red") {
+//         console.log("To show the world the blood we shed!")
+//     } else if (color === "gold") {
+//         console.log("To show the world that we are bold!")
+//     } else if (color === "blue") {
+//         console.log("To show the world that we are true")
+//     } else {
+//         console.log("I dont know anything about " + color);
+//     }
     
-}
+// }
 
-console.log(analyzeColor("green"));
+//console.log(analyzeColor("green"));
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+let randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-
+//console.log(analyzeColor(randomColor));
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+function analyzeColor(color) {
 
+    switch(color) {
+        case 'red':
+            console.log('To show the world the blood we shed')
+            break;
+        case 'gold':
+            console.log('To show the world that we are bold')
+            break;
+        case 'blue':
+            console.log('To show the world that we are true')
+            break;
+        default:
+            console.log('I dont know anything about ' + color)
+            break;
+    }
+}
+console.log(analyzeColor(randomColor))
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
