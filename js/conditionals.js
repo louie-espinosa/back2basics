@@ -70,7 +70,7 @@ function analyzeColor(color) {
             break;
     }
 }
-console.log(analyzeColor(randomColor))
+//console.log(analyzeColor(randomColor))
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -79,6 +79,9 @@ console.log(analyzeColor(randomColor))
  */
 
 /* ########################################################################## */
+let userChoice = prompt("What color is your favorite flower?");
+console.log(analyzeColor(userChoice));
+//alert('Hey you picked ' + analyzeColor(userChoice));
 
 /**
  * TODO:
