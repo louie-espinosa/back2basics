@@ -78,27 +78,25 @@ let randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 
 /* ########################################################################## */
-let userChoice = prompt("What color is your favorite flower?");
-function analyzeColor(color) {
-    switch(color) {
-        case 'red':
-            alert('To show the world the blood we shed')
-            break;
-        case 'gold':
-            alert('To show the world that we are bold')
-            break;
-        case 'blue':
-            alert('To show the world that we are true')
-            break;
-        default:
-            alert('I dont know anything about ' + color)
-            break;
-    }
+// let userChoice = prompt("What color is your favorite flower?");
+// function analyzeColor(color) {
+//     switch(color) {
+//         case 'red':
+//             alert('To show the world the blood we shed')
+//             break;
+//         case 'gold':
+//             alert('To show the world that we are bold')
+//             break;
+//         case 'blue':
+//             alert('To show the world that we are true')
+//             break;
+//         default:
+//             alert('I dont know anything about ' + color)
+//             break;
+//     }
     
-}
-analyzeColor(userChoice);
-
-
+// }
+//analyzeColor(userChoice);
 /**
  * TODO:
  * Suppose there's a promotion in Walmart, each customer is given a randomly
@@ -118,7 +116,22 @@ analyzeColor(userChoice);
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+function calculateTotal(l, t) {
+    if (l == 1) {
+        l = 10
+    } else if (l == 2) {
+        l = 25
+    } else if (l == 3) {
+        l = 35
+    } else if (l == 4) {
+        l = 50
+    } else if (l == 5) {
+        l = 100
+    } else console.log('Sorry you did not qualify for a discount today.')
 
+    return t - l;
+}
+console.log(calculateTotal(5, 100));
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -128,7 +141,7 @@ analyzeColor(userChoice);
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+//let luckyNumber = Math.floor(Math.random() * 6);
 
 /**
  * TODO:
