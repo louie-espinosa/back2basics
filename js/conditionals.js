@@ -53,23 +53,22 @@ let randomColor = colors[Math.floor(Math.random() * colors.length)];
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-function analyzeColor(color) {
-
-    switch(color) {
-        case 'red':
-            console.log('To show the world the blood we shed')
-            break;
-        case 'gold':
-            console.log('To show the world that we are bold')
-            break;
-        case 'blue':
-            console.log('To show the world that we are true')
-            break;
-        default:
-            console.log('I dont know anything about ' + color)
-            break;
-    }
-}
+// function analyzeColor(color) {
+//     switch(color) {
+//         case 'red':
+//             console.log('To show the world the blood we shed')
+//             break;
+//         case 'gold':
+//             console.log('To show the world that we are bold')
+//             break;
+//         case 'blue':
+//             console.log('To show the world that we are true')
+//             break;
+//         default:
+//             console.log('I dont know anything about ' + color
+//             break;
+//     }
+// }
 //console.log(analyzeColor(randomColor))
 /**
  * TODO:
@@ -80,8 +79,25 @@ function analyzeColor(color) {
 
 /* ########################################################################## */
 let userChoice = prompt("What color is your favorite flower?");
-console.log(analyzeColor(userChoice));
-//alert('Hey you picked ' + analyzeColor(userChoice));
+function analyzeColor(color) {
+    switch(color) {
+        case 'red':
+            alert('To show the world the blood we shed')
+            break;
+        case 'gold':
+            alert('To show the world that we are bold')
+            break;
+        case 'blue':
+            alert('To show the world that we are true')
+            break;
+        default:
+            alert('I dont know anything about ' + color)
+            break;
+    }
+    
+}
+analyzeColor(userChoice);
+
 
 /**
  * TODO:
