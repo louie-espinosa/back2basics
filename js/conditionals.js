@@ -118,18 +118,23 @@ let randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 function calculateTotal(l, t) {
     if (l == 1) {
-        l = 10
+        l = .10
+        console.log('You qualified for a 10% discount.')
     } else if (l == 2) {
-        l = 25
+        l = .25
+        console.log('You qualified for a 25% discount!')
     } else if (l == 3) {
-        l = 35
+        l = .35
+        console.log('You qualified for a 35% discount!')
     } else if (l == 4) {
-        l = 50
+        l = .50
+        console.log('You qualified for a 50% discount!')
     } else if (l == 5) {
-        l = 100
+        l = 1
+        console.log('You qualified for a 100% discount!')
     } else console.log('Sorry you did not qualify for a discount today.')
 
-    return t - l;
+    return t- (t * l);
 }
 //console.log(calculateTotal(5, 100));
 /**
@@ -144,7 +149,7 @@ function calculateTotal(l, t) {
 let luckyNumber = Math.floor(Math.random() * 6);
 let billTotal = prompt('You may qualify for a discount today. Please let us know what your total bill is:');
 
-(calculateTotal(luckyNumber, billTotal)) == 0 ? alert('Were sorry, but you did not qualify for a discount today.') : alert( 'Great, your total after your discount is: $' +(calculateTotal(luckyNumber, billTotal)));
+(calculateTotal(luckyNumber, billTotal)) >= billTotal ? alert('Were sorry, but you did not qualify for a discount today. Youre total is: $' + billTotal) : alert( 'Great, your total after your discount is: $' +(calculateTotal(luckyNumber, billTotal)).toFixed(2));
 
 /**
  * TODO:
