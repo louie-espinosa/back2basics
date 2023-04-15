@@ -131,7 +131,7 @@ function calculateTotal(l, t) {
 
     return t - l;
 }
-console.log(calculateTotal(5, 100));
+//console.log(calculateTotal(5, 100));
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -141,7 +141,10 @@ console.log(calculateTotal(5, 100));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-//let luckyNumber = Math.floor(Math.random() * 6);
+let luckyNumber = Math.floor(Math.random() * 6);
+let billTotal = prompt('You may qualify for a discount today. Please let us know what your total bill is:');
+
+(calculateTotal(luckyNumber, billTotal)) == 0 ? alert('Were sorry, but you did not qualify for a discount today.') : alert( 'Great, your total after your discount is: $' +(calculateTotal(luckyNumber, billTotal)));
 
 /**
  * TODO:
