@@ -169,3 +169,8 @@ let billTotal = prompt('You may qualify for a discount today. Please let us know
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+let userAgrees = confirm('try your luck and enter a number?')
+
+if (userAgrees) {
+    let userNumber = prompt('Go ahead an enter any number: ')
+}
