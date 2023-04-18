@@ -146,10 +146,10 @@ function calculateTotal(l, t) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-let luckyNumber = Math.floor(Math.random() * 6);
-let billTotal = prompt('You may qualify for a discount today. Please let us know what your total bill is:');
+// let luckyNumber = Math.floor(Math.random() * 6);
+// let billTotal = prompt('You may qualify for a discount today. Please let us know what your total bill is:');
 
-(calculateTotal(luckyNumber, billTotal)) >= billTotal ? alert('Were sorry, but you did not qualify for a discount today. Youre total is: $' + billTotal) : alert( 'Great, your total after your discount is: $' +(calculateTotal(luckyNumber, billTotal)).toFixed(2));
+// (calculateTotal(luckyNumber, billTotal)) >= billTotal ? alert('Were sorry, but you did not qualify for a discount today. Youre total is: $' + billTotal) : alert( 'Great, your total after your discount is: $' +(calculateTotal(luckyNumber, billTotal)).toFixed(2));
 
 /**
  * TODO:
@@ -169,8 +169,25 @@ let billTotal = prompt('You may qualify for a discount today. Please let us know
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+//I want to run this until the user sees all information in this function
+//do {
 let userAgrees = confirm('try your luck and enter a number?')
 
 if (userAgrees) {
-    let userNumber = prompt('Go ahead an enter any number: ')
+    let userNumber = prompt('Go ahead and enter any number: ')
+    console.log(userNumber)
+    //Show the user the alerts ONLY if they enter a number
+    if (typeof userNumber === NaN) {
+        alert('Please enter ONLY a number')
+    } else {
+        alert('The number you entered is: ' + userNumber);
+        //Need conditions for the next two 'alerts'
+        // alert('Your number is odd or even')
+        // alert('Your number is positive or negative')
+    }
 }
+
+//} while () 
+
+//condition for even or odd
