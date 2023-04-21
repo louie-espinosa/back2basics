@@ -178,7 +178,7 @@ if (userAgrees) {
     let userNumber = prompt('Go ahead and enter any number: ')
     console.log(userNumber)
     //Show the user the alerts ONLY if they enter a number
-    if (typeof userNumber === NaN) {
+    if (isNaN(userNumber)) {
         alert('Please enter ONLY a number')
     } else {
         alert('The number you entered is: ' + userNumber);
@@ -199,4 +199,3 @@ if (userAgrees) {
 
 //} while () 
 
-//condition for even or odd
