@@ -183,13 +183,17 @@ if (userAgrees) {
     } else {
         alert('The number you entered is: ' + userNumber);
         //Need conditions for the next two 'alerts'
-        if (userNumber % 3 == 1) {
+        if (Math.abs(userNumber % 2) == 1) {
             alert('The number ' + userNumber + ' is odd')
         } else {
             alert('The number ' + userNumber + ' is even')
         }
-        // alert('Your number is odd or even')
         // alert('Your number is positive or negative')
+        if (userNumber >= 0) {
+            alert('The number ' + userNumber + ' is positive')
+        } else {
+            alert('The number ' + userNumber + ' is negative')
+        }
     }
 }
 
