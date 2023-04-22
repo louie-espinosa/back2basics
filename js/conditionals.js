@@ -175,7 +175,7 @@ function calculateTotal(l, t) {
 let userAgrees = confirm('try your luck and enter a number?')
 
 if (userAgrees) {
-    let userNumber = prompt('Go ahead and enter any number: ')
+    let userNumber = askUser();
     console.log(userNumber)
     //Show the user the alerts ONLY if they enter a number
     if (isNaN(userNumber)) {
@@ -196,6 +196,11 @@ if (userAgrees) {
         }
     }
 }
+//refactor when prompting for given data
+function askUser () {
+    return prompt('Please enter a number: ');
+}
+
 
 //} while () 
 
