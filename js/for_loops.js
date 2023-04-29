@@ -10,7 +10,7 @@ function showMultiplicationTable(x) {
 
 //2. Use a for-loop and the code from the previous lessons to generate 10 random numbers between 20 and 200 and output to the console whether each number is odd or even.
 
-//Note: Using luckyNumber Math.random outside the for-loop will generate ONE random number ten times, but moving it INSIDE the for-loop will generate ten DIFFERENT random numbers
+//Note: Initializing luckyNumber Math.random outside the for-loop will generate ONE random number ten times, but moving it INSIDE the for-loop will generate ten DIFFERENT random numbers
 function randomTwentyToTwoHundred() {
     for (let i = 1; i <= 10; i++) {
         
@@ -25,3 +25,6 @@ function randomTwentyToTwoHundred() {
     }
 }
 randomTwentyToTwoHundred();
+
+for (let i = "1"; i.length <= 9; i += i)
+console.log(i);
