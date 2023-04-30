@@ -26,7 +26,7 @@ function randomTwentyToTwoHundred() {
 }
 //randomTwentyToTwoHundred();
 
-//TODO: Make this with for loop:
+//3. Make this with for loop:
 // 1
 // 22
 // 333
