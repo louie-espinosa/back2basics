@@ -37,10 +37,8 @@ function randomTwentyToTwoHundred() {
 // 88888888
 // 999999999
 
-let num = 9;
-for (let i = 1; i <= num; i++) {
-    for (let j = 1; j <= i; j++) {
-        console.log(i);
-    }
-    
+for (let i = 1; i <= 9; i++) {
+    console.log(i.toString().repeat(i));
 }
+
+
