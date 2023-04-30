@@ -24,7 +24,23 @@ function randomTwentyToTwoHundred() {
        
     }
 }
-randomTwentyToTwoHundred();
+//randomTwentyToTwoHundred();
 
-for (let i = "1"; i.length <= 9; i += i)
-console.log(i);
+//TODO: Make this with for loop:
+// 1
+// 22
+// 333
+// 4444
+// 55555
+// 666666
+// 7777777
+// 88888888
+// 999999999
+
+let num = 9;
+for (let i = 1; i <= num; i++) {
+    for (let j = 1; j <= i; j++) {
+        console.log(i);
+    }
+    
+}
