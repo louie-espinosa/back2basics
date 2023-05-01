@@ -1,5 +1,6 @@
 "use strict";
 
+//FOR LOOPS
 //1. Create a function named showMultiplicationTable that accepts a number and console.logs the multiplication table for that number (just multiply by the numbers 1 through 10)
 function showMultiplicationTable(x) {
     for (let i = 1; i <= 10; i++) {
@@ -41,8 +42,9 @@ function randomTwentyToTwoHundred() {
 // }
 
 
-//4.
-for (let i = 100; i >= 5; i--) {
-    if (i % 5 === 0)
+//4. decrement from 100 to 5 and print only by 5, i.e., 100, 95, 90... 
+for (let i = 100; i >= 5; i -= 5) {
     console.log(i) 
 }
+ // Move to new file to work on, BREAK AND CONTINUE
+ 
