@@ -17,4 +17,8 @@
 // 16384
 // 32768
 // 65536
-console.log('Hello, World!')
+let x = 2
+while (x <= 65536) {
+    console.log((x))
+    x += x*2 - x
+}
