@@ -5,16 +5,17 @@
 
 let userOddNumber = prompt('Enter an odd number between 1 and 50: ');
 
-let output = ""
+while(Number(isNaN(userOddNumber) || Math.abs(userOddNumber % 2) !== 1)) {
+    userOddNumber = prompt('You did not enter an odd number. Please enter an odd number between 1 and 50: ');
+            break; //breaking out of the code will not read any other code beneath
+}    
+console.log('Number to skip is: ' + userOddNumber )                 
 for (let i = 0; i <= 50; i++) {
-    if (Math.abs(userOddNumber % 2) !== 1 || isNaN(userOddNumber) || userOddNumber < 1 || userOddNumber > 50) {
-        
-        let UserOddNumber = prompt('You did not enter an odd number. Please enter an odd number between 1 and 50: ');
-        break;
-
-    } else {
-        output += i;
+        //We are looking to print i now so the condition should check the i NOT the userOddNumber. IMPORTANT: the first condition will not continue (skip) if using '===', instead of '==' because it checks for stricter condition that userOddNumber is equal in value AND data type to i.
+              
+    if (i == userOddNumber || i % 2 === 0) {
         continue;
-    }
+    }  
+    console.log(i)
 }
 
