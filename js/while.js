@@ -34,12 +34,19 @@
 //Yay! I sold them all... If there are no more cones
 
 let allCones = Math.floor(Math.random() * 50) + 50;
-do {
-   const announcement = console.log('I have a total of ' + allCones + ' ice-cream cones avaialable for sale today!') ;
-
-    let conesSold = Math.floor(Math.random() * 5) + 1;
-    let conesRemaining = allCones - conesSold;
-    console.log('I just sold ' + conesSold + ' cones!')
-    console.log(' and I now have ' + conesRemaining + ' cones remaining for sale!')
-
-} while (0);
+const announcement = console.log('I have a total of ' + allCones + ' ice-cream cones avaialable for sale today!') ;
+do { 
+let conesRemain = Math.floor(Math.random() * 5) + 1;
+//omit the extra step and let conesRemain = the Math.random youre just logging what you sold and NOT what remains
+if (allCones >= conesRemain) {
+    //Lets reduce allCones by conesRemain because we still have cones!
+    allCones = allCones - conesRemain
+    console.log('I just sold ' + conesRemain + ' cone(s).')
+    if (allCones == 0) {
+        console.log('Yay! I sold them all!')
+}
+} else {
+    console.log('Sorry but I cant sell you ' + conesRemain + ' because I only have ' + allCones + ' left.')
+}
+//For the condition use the global variable allCones
+} while (allCones > 0);
