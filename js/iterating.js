@@ -50,5 +50,19 @@ names.forEach(function(name) {
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+    let flavorsArray = ['Chocolate', 'Raspberry', 'Strawberry', 'Vanilla', 'Orange'];
+function firstIndex() {
+    return flavorsArray[0];
+}
 
+function secondIndex() {
+    return flavorsArray[1];
+}
+
+function lastIndex() {
+    return flavorsArray[4];
+}
+console.log(firstIndex());
+console.log(secondIndex());
+console.log(lastIndex());
 })();
