@@ -11,7 +11,11 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-console.log('Hello, World!')
+const person = {}
+    person.firstName = 'Louie'
+    person.lastName = 'Espinosa'
+    console.log('My first name is ' + person.firstName)
+    console.log('My last name is ' + person.lastName)
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -21,7 +25,11 @@ console.log('Hello, World!')
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-
+person.sayHello = function () {
+    return "Hello from " + person.firstName + " " + person.lastName + "!"
+}
+//Note to self when printing/calling functions do NOT forget the paranthesis
+console.log(person.sayHello())
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
