@@ -52,13 +52,10 @@ console.log(person.sayHello())
     //I spent an hour attempting to nest a forEach for the amount, but the amount isnt an array of amounts(values)...Smacks own head!!!
 shoppers.hebRewards = function() {
     shoppers.forEach(function(shopper) {
-        //I can print each shopper object here
-        //console.log(shopper.amount)
-        let discount = shopper.amount*.12;
+        let discount = shopper.amount *.12;
         let final = shopper.amount - discount;
         if (shopper.amount > 200) {
-            
-            console.log('Youve spent $' + shopper.amount + ', Congrats you\'ve earned a twelve percent discount, or $' + discount + ' off your bill! Your new total is: $' + final.toFixed(2))
+            console.log('You\'ve spent $' + shopper.amount + ', Congrats you\'ve earned a twelve percent discount, or $' + discount.toFixed(2) + ' off your bill! Your new total is: $' + final.toFixed(2))
         } else {
             console.log('You\'ve spent $' + shopper.amount + ', Unfortunately you did not qualify for the discount today. Your total is $' + shopper.amount.toFixed(2))
         }
@@ -77,7 +74,28 @@ shoppers.hebRewards();
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-
+let books = [
+    { 
+        title: 'Revelation', 
+        author: {firstName: 'John', lastName: 'The Revelator'}
+    },
+    {
+        title: 'It\'s Dangerous to be Right When the government is Wrong',
+        author: {firstName: 'Andrew', lastName: 'Napolitano'}
+    },
+    {
+        title: 'Build: An Unothodox Guide to Making Things Worth Making',
+        author: {firstName: 'Tony', lastName: 'Fadell'}
+    },
+    {
+        title: '12 Rules For Life',
+        author: {firstName: 'Jordan', lastName: 'Peterson'}
+    },
+    {
+        title: 'Black Rednecks and White Liberals',
+        author: {firstName: 'Thomas', lastName: 'Sowell'}
+    }
+]
     /**
      * TODO:
      * Loop through the books array and output the following information about
