@@ -61,7 +61,7 @@ shoppers.hebRewards = function() {
         }
     })
 }
-shoppers.hebRewards();
+//shoppers.hebRewards();
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -80,11 +80,11 @@ let books = [
         author: {firstName: 'John', lastName: 'The Revelator'}
     },
     {
-        title: 'It\'s Dangerous to be Right When the government is Wrong',
+        title: 'It\'s Dangerous to be Right When the Government is Wrong',
         author: {firstName: 'Andrew', lastName: 'Napolitano'}
     },
     {
-        title: 'Build: An Unothodox Guide to Making Things Worth Making',
+        title: 'Build: An Unorthodox Guide to Making Things Worth Making',
         author: {firstName: 'Tony', lastName: 'Fadell'}
     },
     {
@@ -121,6 +121,9 @@ let books = [
      *      ...
      */
 
+books.forEach(function(book, i) {
+    console.log('Book # ' + parseInt(i + 1),'\nTitle: ' + book.title,'\nAuthor: ' + book.author.firstName, book.author.lastName)
+})
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
