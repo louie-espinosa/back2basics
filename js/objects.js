@@ -135,8 +135,13 @@ books.forEach(function(book, i) {
      *   `showBookInfo` function.
      */
     books.createBook = function(title, firstName, lastName) {
+        let newBook = {
+            title: title,
+            author: {firstName, lastName}
+        }
         
-        return books.push(title, firstName, lastName)
+        return books.push(newBook)
     }
     books.createBook('Brave New World', 'Aldous',  'Huxley')
+    console.log(books[5])
 })();
