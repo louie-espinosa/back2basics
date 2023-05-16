@@ -134,5 +134,9 @@ books.forEach(function(book, i) {
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-    
+    books.createBook = function(title, firstName, lastName) {
+        
+        return books.push(title, firstName, lastName)
+    }
+    books.createBook('Brave New World', 'Aldous',  'Huxley')
 })();
