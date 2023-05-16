@@ -49,22 +49,22 @@ console.log(person.sayHello())
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
-    
+    //I spent an hour attempting to nest a forEach for the amount, but the amount isnt an array of amounts(values)...Smacks own head!!!
 shoppers.hebRewards = function() {
     shoppers.forEach(function(shopper) {
-       shopper.amount.forEach(function(individualAmount) {
-        console.log(individualAmount)
-        
-       })
-        
-        // if (shopper.amount > 200) {
-
-        //     console.log('Youve spent ' + shopper.amount + ' Congrats you\'ve earned a twelve percent discount!')
-        // } else {
-        //     console.log('You\'ve spent ' + shopper.amount + ' Unfortunately you did not qualify fpor teh discount today. Your total is $' + shopper.amount)
-        // }
+        //I can print each shopper object here
+        //console.log(shopper.amount)
+        let discount = shopper.amount*.12;
+        let final = shopper.amount - discount;
+        if (shopper.amount > 200) {
+            
+            console.log('Youve spent $' + shopper.amount + ', Congrats you\'ve earned a twelve percent discount, or $' + discount + ' off your bill! Your new total is: $' + final.toFixed(2))
+        } else {
+            console.log('You\'ve spent $' + shopper.amount + ', Unfortunately you did not qualify for the discount today. Your total is $' + shopper.amount.toFixed(2))
+        }
     })
 }
+shoppers.hebRewards();
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -113,5 +113,5 @@ shoppers.hebRewards = function() {
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-
+    
 })();
