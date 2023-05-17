@@ -74,28 +74,29 @@ shoppers.hebRewards = function() {
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-let books = [
-    { 
-        title: 'Revelation', 
-        author: {firstName: 'John', lastName: 'The Revelator'}
-    },
-    {
-        title: 'It\'s Dangerous to be Right When the Government is Wrong',
-        author: {firstName: 'Andrew', lastName: 'Napolitano'}
-    },
-    {
-        title: 'Build: An Unorthodox Guide to Making Things Worth Making',
-        author: {firstName: 'Tony', lastName: 'Fadell'}
-    },
-    {
-        title: '12 Rules For Life',
-        author: {firstName: 'Jordan', lastName: 'Peterson'}
-    },
-    {
-        title: 'Black Rednecks and White Liberals',
-        author: {firstName: 'Thomas', lastName: 'Sowell'}
-    }
-]
+let books =  [];
+// let books = [
+//     { 
+//         title: 'Revelation', 
+//         author: {firstName: 'John', lastName: 'The Revelator'}
+//     },
+//     {
+//         title: 'It\'s Dangerous to be Right When the Government is Wrong',
+//         author: {firstName: 'Andrew', lastName: 'Napolitano'}
+//     },
+//     {
+//         title: 'Build: An Unorthodox Guide to Making Things Worth Making',
+//         author: {firstName: 'Tony', lastName: 'Fadell'}
+//     },
+//     {
+//         title: '12 Rules For Life',
+//         author: {firstName: 'Jordan', lastName: 'Peterson'}
+//     },
+//     {
+//         title: 'Black Rednecks and White Liberals',
+//         author: {firstName: 'Thomas', lastName: 'Sowell'}
+//     }
+// ]
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -121,9 +122,9 @@ let books = [
      *      ...
      */
 
-books.forEach(function(book, i) {
-    console.log('Book # ' + parseInt(i + 1),'\nTitle: ' + book.title,'\nAuthor: ' + book.author.firstName, book.author.lastName)
-})
+// books.forEach(function(book, i) {
+//     console.log('Book # ' + parseInt(i + 1),'\nTitle: ' + book.title,'\nAuthor: ' + book.author.firstName, book.author.lastName)
+// })
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -143,5 +144,10 @@ books.forEach(function(book, i) {
         return books.push(newBook)
     }
     books.createBook('Brave New World', 'Aldous',  'Huxley')
-    console.log(books[5])
+    books.createBook('Revelation', 'John', 'The Revelator')
+    books.createBook('It\s Dangerous to be Right When the Government is Wrong', 'Andrew', 'Napolitano')
+    books.createBook('Build: An Unorthodox Guide to Making Things Worth Making', 'Tony', 'Fadell')
+    books.createBook('12 Rules for Life', 'Jordan', 'Peterson')
+    books.createBook('Black Rednecks and White Liberals', 'Thomas', 'Sowell')
+    console.log(books);
 })();
