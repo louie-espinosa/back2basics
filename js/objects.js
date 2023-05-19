@@ -147,26 +147,29 @@ let books =  [];
     books.createBook('Build: An Unorthodox Guide to Making Things Worth Making', 'Tony', 'Fadell')
     books.createBook('12 Rules for Life', 'Jordan', 'Peterson')
     books.createBook('Black Rednecks and White Liberals', 'Thomas', 'Sowell')
-    console.log(books);
+    //console.log(books);
     //Part 2 of Bonus
-    books.showBookInfo = function(bookObj) {
-      const titles = books.map(function(book) {
-        return book.title;
+    books.showBookInfo = function() {
+        const index = books.map(function(book) {
+            return book.id;
+        }).indexOf() + 1
+        
+        const titles = books.map(function(book) {
+            return book.title;
       });
-      console.log(titles)
+        console.log(titles)
       
-      const authors = books.map(function(book) {
-        return Object.values(book.author);
+        const authors = books.map(function(book) {
+            return Object.values(book.author);
       })
-      console.log(authors)
+        console.log(authors)
       
       
         // books.forEach(function(book, i) {
 //     console.log('Book # ' + parseInt(i + 1),'\nTitle: ' + book.title,'\nAuthor: ' + book.author.firstName, book.author.lastName)
 // })
-        return bookObj
+        console.log('Book # ' + index)
     }
     books.showBookInfo()
-    //undefined
-    //console.log(books.createBook.newBook)
+   
 })();
