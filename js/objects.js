@@ -155,7 +155,10 @@ let books =  [];
       });
       console.log(titles)
       
-      
+      const authors = books.map(function(book) {
+        return Object.values(book.author);
+      })
+      console.log(authors)
       
       
         // books.forEach(function(book, i) {
