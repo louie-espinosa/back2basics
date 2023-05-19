@@ -14,8 +14,8 @@
 const person = {}
     person.firstName = 'Louie'
     person.lastName = 'Espinosa'
-    console.log('My first name is ' + person.firstName)
-    console.log('My last name is ' + person.lastName)
+    //console.log('My first name is ' + person.firstName)
+    //console.log('My last name is ' + person.lastName)
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -122,9 +122,7 @@ let books =  [];
      *      ...
      */
 
-// books.forEach(function(book, i) {
-//     console.log('Book # ' + parseInt(i + 1),'\nTitle: ' + book.title,'\nAuthor: ' + book.author.firstName, book.author.lastName)
-// })
+//Reactored loop and moved to L153 for use in function, per bonus.
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -150,4 +148,22 @@ let books =  [];
     books.createBook('12 Rules for Life', 'Jordan', 'Peterson')
     books.createBook('Black Rednecks and White Liberals', 'Thomas', 'Sowell')
     console.log(books);
+    //Part 2 of Bonus
+    books.showBookInfo = function(bookObj) {
+      const titles = books.map(function(book) {
+        return book.title;
+      });
+      console.log(titles)
+      
+      
+      
+      
+        // books.forEach(function(book, i) {
+//     console.log('Book # ' + parseInt(i + 1),'\nTitle: ' + book.title,'\nAuthor: ' + book.author.firstName, book.author.lastName)
+// })
+        return bookObj
+    }
+    books.showBookInfo()
+    //undefined
+    //console.log(books.createBook.newBook)
 })();
