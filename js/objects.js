@@ -149,11 +149,11 @@ let books =  [];
     books.createBook('Black Rednecks and White Liberals', 'Thomas', 'Sowell')
     //console.log(books);
     //Part 2 of Bonus
-    books.showBookInfo = function() {
+    books.showBookInfo = function(bookObj) {
         const index = books.map(function(book) {
             return book.id;
         }).indexOf() + 1
-        
+
         const titles = books.map(function(book) {
             return book.title;
       });
@@ -164,12 +164,10 @@ let books =  [];
       })
         console.log(authors)
       
-      
-        // books.forEach(function(book, i) {
-//     console.log('Book # ' + parseInt(i + 1),'\nTitle: ' + book.title,'\nAuthor: ' + book.author.firstName, book.author.lastName)
-// })
-        console.log('Book # ' + index)
+        return books.forEach(function(book, i) {
+
+    console.log('Book # ' + parseInt(i + 1),'\nTitle: ' + book.title,'\nAuthor: ' + book.author.firstName, book.author.lastName)
+})
     }
-    books.showBookInfo()
-   
+   console.log(books.showBookInfo(books.at(-1)))
 })();
