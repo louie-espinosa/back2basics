@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Creepy";
+    src: url("Assets/Fonts/Creepy.woff") format("woff"), url("Assets/Fonts/Creepy.woff2") format("woff2")
+  }
+  
+  @font-face {
+    font-family: "Lunacy";
+    src: url("Assets/Fonts/Lunacy.woff") format("woff"), url("Assets/Fonts/Lunacy.woff2") format("woff2")
+  }
+  
 *{
     box-sizing: border-box;
 }
@@ -135,7 +145,7 @@ font-family: sans-serif;
 .overlay-text-small{
 font-size: .3em;
 }
-
+/*Click to Start*/
 .overlay-text.visible{
     display: flex;
     flex-direction: column;
