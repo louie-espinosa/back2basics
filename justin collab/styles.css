@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Creepy";
-    src: url("Assets/Fonts/Creepy.woff") format("woff"), url("Assets/Fonts/Creepy.woff2") format("woff2")
+    src: url("assets/fonts/Creepy.woff") format("woff"), url("assets/fonts/Creepy.woff") format("woff2")
   }
   
   @font-face {
