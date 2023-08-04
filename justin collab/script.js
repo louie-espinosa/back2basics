@@ -4,13 +4,13 @@ class AudioController{
         this.bgMusic = new Audio('assets/audio/horror-sci-fi-wind-tunnel-894.wav');
         this.flipSound = new Audio('assets/audio/horror-trailer-long-sweep-561.wav');
         this.matchSound = new Audio('assets/audio/sweep-of-darkness-2630.wav');
-        this.victorySound = new Audio('asstes/audio-swish-1495.wav');
+        this.victorySound = new Audio('assets/audio-swish-1495.wav');
         this.gameOverSound = new Audio('assets/audio/terror-transition-2484.wav');
         this.bgMusic.volume = 0.5;
         this.bgMusic.loop = true;
     }
     startMusic(){
-        this.bgMusic.play();
+        this.bgMusic.play();   
     }
     stopMusic(){
         this.bgMusic.pause();
@@ -47,8 +47,8 @@ class MixOrMatch {
         this.timeRemaining = this.totalTime;
         this.matchedCards = [];
         this.busy = true;
-         setTimeout(function (){
-        this.AudioController.startMusic();
+        setTimeout(() => {
+        this.audioController.startMusic();
         this.shuffleCards(this.cardsArray);
         this.countDown = this.startCountDown();
         this.busy = false;
@@ -88,7 +88,7 @@ class MixOrMatch {
 
     flipCard(card){
         if (this.canFlipCard(card)) {
-            this.AudioController.flip();
+            this.audioController.flip();
             this.totalClicks++;
             this.ticker.innerText = this.totalClicks;
             card.classList.add('visible');
@@ -151,7 +151,7 @@ if(document.readyState === 'loading'){
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
-    let cards = Array.from(documents.getElementsByClassName('card'));
+    let cards = Array.from(document.getElementsByClassName('card'));
     let game = new MixOrMatch(100, cards);
 
     overlays.forEach(function(overlay) {
