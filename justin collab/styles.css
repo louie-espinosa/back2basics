@@ -10,10 +10,13 @@
   
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html{
     min-height: 100vh;
+    cursor: url('assets/cursor/daki-and-obi.png'), auto !important;
 }
 
 body{
@@ -57,13 +60,16 @@ body{
     border-radius: 5%;
     margin: 3px;
     position: relative;
+    
+   
 }
-
+/* I need to adjust the face so that it fits the card */
 .card-face{
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     height: 100%;
     display: flex;
+    background-size: contain;
     justify-content: center;
     align-items: center;
     backface-visibility: hidden;
