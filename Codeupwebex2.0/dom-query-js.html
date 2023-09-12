@@ -7,7 +7,7 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
-<button id="btn1"></button>
+<button id="btn1">alt text</button>
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -18,7 +18,8 @@
 <button id="btn3"></button>
 
 <h2 id="sub-header">Hello Again.</h2>
-<button id="btn2"></button>
+<button id="btn2">alt color</button>
+
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -35,17 +36,22 @@
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
         let mainHeader = document.getElementById('main-header');
-
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = 'Javascript is Cool'
+        let btnOne = document.querySelector('#btn1');
+        btnOne.addEventListener('click', function() {
+            mainHeader.innerHTML = 'Javascript is Cool'
+        })
+        
         // TODO: Uncomment the next line and get the sub header element by id
         let subHeader = document.getElementById('sub-header');
+        let btnTwo = document.querySelector('#btn2');
 
-        // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = 'blue'
+        btnTwo.addEventListener('click', function() {
+            subHeader.style.color = 'blue'
+        })
+        
         // TODO: Uncomment the next line and get all list items
         let listItems = document.getElementsByTagName('li');
-
+        
         // TODO: Set text color on every other list item to grey
         for (let i = 0; i < listItems.length; i++) {
             if (i % 2 == 0) {
