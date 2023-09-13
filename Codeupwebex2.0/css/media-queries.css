@@ -4,12 +4,35 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) {
 
 .alert-info {
+    margin: 5px;
     background-color: rgba(142, 254, 254, 0.836);
     text-align:center
 }
 div>a {
     text-decoration: none;
     color: black;
+}
+h1 {
+    text-align: center;
+    margin: 3px 0 6px 0;
+}
+ul {
+    padding: 0%;
+    text-align: center;
+    
+}
+li>a {
+    display: block;
+    margin: 5px;
+    background-color: lightgray;
+    color: blue;
+
+}
+img {
+    margin: 0 5px;
+    background-color: white;
+    width: 395px;
+    height: 224px;
 }
 }
  @media only screen 
