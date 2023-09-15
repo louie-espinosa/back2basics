@@ -1,8 +1,15 @@
- /* Smartphones (portrait and landscape) ----------- */
+* {
+box-sizing: border-box
+}
+
+/* Smartphones (portrait and landscape) ----------- */
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
-
+body{
+max-width: 329px;
+height: 224px;
+}
 .alert-info {
     margin: 5px;
     background-color: rgba(142, 254, 254, 0.836);
@@ -36,7 +43,22 @@ li>a {
 img {
     margin: 5px;
     background-color: white;
-    max-width: 100%;
+    width: 329px;
+    height: 224px;
+}
+#main {
+    margin: 5px;
+}
+.sub-section {
+    margin: 5px;
+}
+footer>p {
+    font-size: 0.9em;
+    margin: 50px 5px 5px;
+}
+.social-media-links {
+    display: block;
+    
 }
 }
  @media only screen 
