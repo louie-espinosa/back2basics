@@ -24,15 +24,19 @@ ul {
 li>a {
     display: block;
     margin: 5px;
+    padding: 5px 0;
     background-color: lightgray;
     color: blue;
 
 }
+.header-img {
+    width: 98%;
+   
+}
 img {
-    margin: 0 5px;
+    margin: 5px;
     background-color: white;
-    width: 395px;
-    height: 224px;
+    max-width: 100%;
 }
 }
  @media only screen 
