@@ -7,7 +7,6 @@ box-sizing: border-box
 and (min-device-width : 190px) 
 and (max-device-width : 530px) {
 body{
-    background-color: blue;
 max-width: 767px;
 height: 224px;
 }
@@ -53,15 +52,25 @@ img {
 .sub-section {
     margin: 5px;
 }
+footer {
+    border: 2px red dashed;
+}
 footer>p {
+    border: 2px green dashed;
     display: inline-block;
+    width: 49%;
     font-size: 0.9em;
-    margin: 50px 5px 5px;
+    margin-top: 15%;
 }
 #social-media-links {
+    border: 2px blue dashed;
     display: inline-block;
-    margin-left: 30%;
+    width: 49%;
+    /* margin-left: 50%; */
     
+}
+#facebook {
+    margin-left: 70%;
 }
 }
  @media only screen 
