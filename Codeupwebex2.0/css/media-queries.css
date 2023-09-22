@@ -4,11 +4,11 @@ box-sizing: border-box
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 767px) {
+and (min-device-width : 190px) 
+and (max-device-width : 530px) {
 body{
     background-color: blue;
-max-width: 329px;
+max-width: 767px;
 height: 224px;
 }
 .alert-info {
@@ -37,14 +37,14 @@ li>a {
     color: blue;
 
 }
-.header-img {
-    width: 98%;
+/* .header-img {
+    width: 100%;
    
-}
+} */
 img {
     margin: 5px;
     background-color: white;
-    width: 329px;
+    max-width: 98%;
     height: 224px;
 }
 #main {
@@ -65,7 +65,7 @@ footer>p {
 }
 }
  @media only screen 
-and (min-device-width : 768px) {
+and (min-device-width : 531px) {
 
    body {
     background-color: green;
