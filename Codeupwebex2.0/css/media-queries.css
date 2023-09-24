@@ -82,7 +82,13 @@ and (min-device-width : 531px) {
     display: none;
     /* visibility: hidden; */
    }
+   ul {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+   }
     ul>li{
+        float: right;
         font-size: small;
         display: inline;
         padding: 5px;
